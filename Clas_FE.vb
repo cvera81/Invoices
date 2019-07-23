@@ -24,11 +24,9 @@ Public Class Clas_FE
         ServicePointManager.Expect100Continue = False
         ServicePointManager.CheckCertificateRevocationList = True
         wService.ClientCredentials.CreateSecurityTokenManager()
-        'wService.ClientCredentials.UserName.UserName = "20427799973WILLI4MC"
-        'wService.ClientCredentials.UserName.Password = "factu123"
-        wService.ClientCredentials.UserName.UserName = "20427799973MODDATOS"
-        wService.ClientCredentials.UserName.Password = "MODDATOS"
-
+        wService.ClientCredentials.UserName.UserName = "20427799973CVERA"
+        wService.ClientCredentials.UserName.Password = "factu123"
+        
     End Sub
     'Public Function getConexion() As SqlConnection
     '    Dim cnn As New SqlConnection(cadena)
@@ -99,11 +97,9 @@ Public Class Clas_FE
         Dim Filezip As String = pArchivo
         Dim FilePath As String = Ruta & Filezip
         Dim bytearray As Byte() = File.ReadAllBytes(FilePath)
-        'wService.ClientCredentials.CreateSecurityTokenManager()
-        'wService.ClientCredentials.UserName.UserName = "20427799973WILLI4MC"
-        'wService.ClientCredentials.UserName.Password = "factu123"
-        'wService.ClientCredentials.UserName.UserName = "20427799973MODDATOS"
-        'wService.ClientCredentials.UserName.Password = "MODDATOS"
+      
+        
+        
         Try
             wService.Open()
             Dim returnbyte As Byte() = wService.sendBill(Filezip, bytearray)
@@ -132,11 +128,7 @@ Public Class Clas_FE
         Dim Filezip As String = pArchivo
         Dim FilePath As String = Ruta & Filezip
         Dim bytearray As Byte() = File.ReadAllBytes(FilePath)
-        'wService.ClientCredentials.CreateSecurityTokenManager()
-        'wService.ClientCredentials.UserName.UserName = "20427799973WILLI4MC"
-        'wService.ClientCredentials.UserName.Password = "factu123"
-        'wService.ClientCredentials.UserName.UserName = "20427799973MODDATOS"
-        'wService.ClientCredentials.UserName.Password = "MODDATOS"
+     
 
         Try
             wService.Open()
@@ -156,11 +148,7 @@ Public Class Clas_FE
     Public Function ObtenerEstado(ByVal pticket As String) As String
         ' Dim Ruta As String = System.IO.Directory.GetCurrentDirectory()
         Dim strRetorno As String = ""
-        'wService.ClientCredentials.CreateSecurityTokenManager()
-        'wService.ClientCredentials.UserName.UserName = "20427799973WILLI4MC"
-        'wService.ClientCredentials.UserName.Password = "factu123"
-        'wService.ClientCredentials.UserName.UserName = "20427799973MODDATOS"
-        'wService.ClientCredentials.UserName.Password = "MODDATOS"
+      
 
         Try
             wService.Open()
