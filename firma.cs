@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-//using System.Drawing;
 using System.Linq;
 using System.Text;
-//using System.Windows.Forms;
 using System.IO;
 using System.IO.Compression;
 using System.Security.Cryptography.Xml;
@@ -44,8 +42,8 @@ namespace Firmado
                 {
                     local_typoDocumento = "RC";
                 }
-                this.pathcert = pathcert + @"\Certificado\" + "WGN4NGp3SGVySVQwRnFIQQ==.p12";
-                X509Certificate2 MiCertificado = new X509Certificate2(this.pathcert, "PgKk9fukA5bKgxfG");                
+                this.pathcert = pathcert + @"\Certificado\" + "XXXXXXXXXXXXXXXXXXXXXX==.p12";
+                X509Certificate2 MiCertificado = new X509Certificate2(this.pathcert, "asdqwezcx");                
                 XmlDocument xmlDoc = new XmlDocument();
                 xmlDoc.PreserveWhitespace = true;
                 xmlDoc.Load(local_xmlArchivo);
@@ -171,11 +169,9 @@ namespace Firmado
         public bool ConvertZipToFile(string path)
         {
             String local_xmlArchivo =  path;
-            //D:\William\SunatPrueba\cdr'
-            //   string startPath = @"D:\William\SunatPrueba\sign\";
+            
             string startPath = @"D:\sistema\20151228\xml";
-            // string startPath = @"C:\Users\cvera\Desktop\certificado\file";
-            //20432348114-01-FF11-00095452
+            
 
             string zipPath = local_xmlArchivo; //+ ".zip";
             zipPath = zipPath.Replace(".xml", ".zip");
